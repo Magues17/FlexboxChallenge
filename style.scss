@@ -1,0 +1,163 @@
+$baseSize: 1.25rem;
+$greycolorbox: lightgrey;
+
+@mixin webPresenceSubContainer {
+    width: 270px;
+    height: 324px;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+
+}
+
+p {
+    line-height: 21px;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
+
+
+.container {
+
+    &-main {
+        width: $baseSize + 51.875rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+    }
+
+    &-titleimage {
+        background-image: url("./img/nasabackground.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: $baseSize + 26.875rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        .titletext {
+            color: white;
+            font-size: 5rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+            -webkit-text-stroke: #100f0f;
+            -webkit-text-stroke-width: 0.05rem;
+
+        }
+
+    }
+
+    &-webpresence {
+        height: $baseSize + 19rem;
+        width: 100%;
+        background-color: $greycolorbox;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
+
+    }
+
+    &-socialmedia {
+        @include webPresenceSubContainer();
+    }
+
+    &-officeinfo {
+        @include webPresenceSubContainer();
+
+    }
+
+    &-contact {
+        @include webPresenceSubContainer();
+    }
+}
+
+.card {
+    &-title {
+        padding: 22px 0px 10px 30px;
+        font-size: 20px;
+        font-weight: bolder;
+        color: #100f0f;
+
+    }
+
+    &-content {
+        padding: 10px 0px 15px 30px;
+        color: rgb(44, 43, 43);
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+
+
+
+    }
+
+}
+
+.links {
+    line-height: 22.5px;
+}
+
+.hspacer {
+    height: $baseSize;
+
+
+}
+
+
+.wspacer {
+    width: $baseSize;
+
+}
+
+.btn {
+    background-color: #484646;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 115px;
+    font-weight: bolder;
+    &:hover{
+        background-color: #b7b7b7;
+    }
+    &:active {
+        background-color: #118b34;
+    }
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 43px 0 0;
+
+    input{
+        margin: 0 0 10px 0;
+    }
+}
+
+
+textarea {
+    resize: none;
+    margin: 0 0 10px 0;
+    
+    
+}
